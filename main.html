@@ -9,9 +9,13 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+		  if (arr.length < 2 || new Set(arr).size === 1) {
+		    return -Infinity;
+		  }
+		  const sortedArr = arr.sort((a, b) => b - a);
+		  return sortedArr[1];
 		}
+
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
@@ -23,7 +27,6 @@
 		}
 		Main();
 	</script>
-
     <script type="text/javascript" src="./script.js">
 </script>
 
